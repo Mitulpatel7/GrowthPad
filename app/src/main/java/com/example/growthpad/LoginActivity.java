@@ -1,0 +1,43 @@
+package com.example.growthpad;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+public class LoginActivity extends AppCompatActivity {
+
+    EditText login_email , login_password;
+    Button login_btn;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
+        setContentView(R.layout.activity_login);
+        login_email = findViewById(R.id.login_emailid);
+        login_password  = findViewById(R.id.login_password);
+        login_btn = findViewById(R.id.login_btn);
+
+
+        login_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(login_email.getText().toString().equals(""))
+                {
+                    login_email.setError("Email, Phone number or Username Required");
+                }
+                if(login_password.getText().toString().equals(""))
+                {
+                    login_password.setError("Password Required");
+                }
+                else
+                {
+                    Toast.makeText(LoginActivity.this, "Login Successfully", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+}
