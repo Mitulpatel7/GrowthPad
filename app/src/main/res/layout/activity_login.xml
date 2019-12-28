@@ -30,16 +30,16 @@
 
             android:id="@+id/card_view"
             android:layout_width="@dimen/_280sdp"
-            android:layout_height="@dimen/_400sdp"
+            android:layout_height="@dimen/_320sdp"
             android:layout_marginBottom="@dimen/_5sdp"
             android:layout_gravity="center_horizontal"
             app:cardBackgroundColor="#ffffff"
-            app:cardCornerRadius="15dp">
+            app:cardCornerRadius="@dimen/_5sdp">
 
             <ImageView
                 android:id="@+id/login_main_logo"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_90sdp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="-70dp"
                 android:src="@drawable/growthpad" />
@@ -51,44 +51,43 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_bold"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="@dimen/_50sdp"
                 android:text="Log in"
                 android:textColor="#363E4B"
-                android:textSize="40dp"
+                android:textSize="@dimen/_35sdp"
                 android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/login_emailid"
-                android:layout_width="280dp"
-                android:layout_height="45dp"
+                android:layout_width="@dimen/_230sdp"
+                android:layout_height="@dimen/_35sdp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="150dp"
+                android:layout_marginTop="@dimen/_120sdp"
                 android:background="@drawable/custom_edittext"
-
-                android:drawablePadding="10dp"
+                android:drawablePadding="@dimen/_10sdp"
                 android:fontFamily="@font/montserrat_medium"
                 android:hint="Email, Phone Number or Username"
                 android:inputType="textEmailAddress|number"
-                android:paddingLeft="20dp"
+                android:paddingLeft="@dimen/_15sdp"
                 android:textColorHint="#363E4B"
-                android:textSize="15dp" />
+                android:textSize="@dimen/_11sdp" />
 
 
             <EditText
                 android:id="@+id/login_password"
-                android:layout_width="280dp"
-                android:layout_height="45dp"
+                android:layout_width="@dimen/_230sdp"
+                android:layout_height="@dimen/_35sdp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="230dp"
+                android:layout_marginTop="@dimen/_180sdp"
                 android:background="@drawable/custom_edittext"
-                android:drawablePadding="10dp"
+                android:drawablePadding="@dimen/_10sdp"
                 android:fontFamily="@font/montserrat_medium"
                 android:hint="Password"
                 android:inputType="numberPassword|textPassword"
-                android:paddingLeft="25dp"
+                android:paddingLeft="@dimen/_15sdp"
                 android:password="true"
                 android:textColorHint="#363E4B"
-                android:textSize="15dp" />
+                android:textSize="@dimen/_11sdp"/>
 
             <TextView
                 android:id="@+id/forgot_password"
@@ -96,23 +95,23 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_medium"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="290dp"
+                android:layout_marginTop="@dimen/_230sdp"
                 android:text="Forgot password?"
-                android:textSize="30px"
+                android:textSize="@dimen/_10sdp"
                 android:textStyle="bold" />
 
             <Button
                 android:id="@+id/login_btn"
-                android:layout_width="270dp"
-                android:layout_height="50dp"
+                android:layout_width="@dimen/_230sdp"
+                android:layout_height="@dimen/_40sdp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="330dp"
+                android:layout_marginTop="@dimen/_260sdp"
                 android:background="@drawable/custom_btn"
                 android:fontFamily="@font/montserrat_bold"
                 android:text="Login"
                 android:textAllCaps="false"
                 android:textColor="@android:color/white"
-                android:textSize="30dp"
+                android:textSize="@dimen/_25sdp"
                 android:textStyle="bold" />
 
 
@@ -121,20 +120,19 @@
     </FrameLayout>
     
     <Button
-        android:layout_width="320dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="@dimen/_45sdp"
         android:text="Sign up using Google"
         android:textAllCaps="false"
         android:fontFamily="@font/montserrat_medium"
-        android:textSize="20dp"
+        android:textSize="@dimen/_17sdp"
         android:textStyle="bold"
-
         android:drawableLeft="@drawable/google"
         android:layout_gravity="center"
-        android:paddingLeft="20dp"
+        android:paddingLeft="@dimen/_15sdp"
         android:gravity="center"
         android:background="@drawable/custom_google_btn"
-        android:layout_marginTop="48px"
+        android:layout_marginTop="@dimen/_10sdp"
         />
 
     <TextView
@@ -142,23 +140,23 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:text="Don't have an account?"
-        android:textSize="30px"
+        android:textSize="@dimen/_10sdp"
 
         android:fontFamily="@font/montserrat_medium"
         android:layout_gravity="center"
-        android:layout_marginTop="37px"/>
+        android:layout_marginTop="@dimen/_5sdp"/>
 
     <Button
         android:id="@+id/create_account_btn"
-        android:layout_width="320dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="32px"
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/custom_create_account_btn"
         android:text="Create Account"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
-        android:textSize="30dp"
+        android:textSize="@dimen/_25sdp"
 
         android:fontFamily="@font/montserrat_bold" />
 
