@@ -10,9 +10,9 @@
     tools:context=".LoginActivity">
 
     <ImageView
-        android:layout_width="@dimen/_140sdp"
+        android:layout_width="@dimen/_120sdp"
         android:layout_height="@dimen/_90sdp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="@dimen/_30sdp"
         android:id="@+id/login_main_upr_logo"
         android:src="@drawable/growthpad"
         android:layout_gravity="center_horizontal"
@@ -23,15 +23,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="@dimen/_5sdp"
         android:layout_gravity="center_horizontal">
 
         <android.support.v7.widget.CardView
 
             android:id="@+id/card_view"
-            android:layout_width="320dp"
-            android:layout_height="411dp"
-            android:layout_marginBottom="10dp"
+            android:layout_width="@dimen/_280sdp"
+            android:layout_height="@dimen/_400sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
             android:layout_gravity="center_horizontal"
             app:cardBackgroundColor="#ffffff"
             app:cardCornerRadius="15dp">
