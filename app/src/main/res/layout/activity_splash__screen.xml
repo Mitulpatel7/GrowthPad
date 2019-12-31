@@ -15,9 +15,9 @@
     <ImageView
         android:id="@+id/growthpad_logo"
         android:layout_width="@dimen/_200sdp"
-        android:layout_height="@dimen/_200sdp"
+        android:layout_height="@dimen/_180sdp"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/logofullcurve"/>
+        android:src="@drawable/ic_growthpad"/>
 
     <TextView
         android:id="@+id/growth"

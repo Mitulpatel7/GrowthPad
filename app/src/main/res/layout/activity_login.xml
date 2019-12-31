@@ -10,13 +10,13 @@
     tools:context=".LoginActivity">
 
     <ImageView
-        android:layout_width="@dimen/_120sdp"
-        android:layout_height="@dimen/_90sdp"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="@dimen/_110sdp"
         android:layout_marginTop="@dimen/_30sdp"
         android:id="@+id/login_main_upr_logo"
-        android:src="@drawable/growthpad"
+        android:src="@drawable/ic_growthpad"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="-50dp"/>
+        android:layout_marginBottom="-70dp"/>
 
 
     <FrameLayout
@@ -38,11 +38,11 @@
 
             <ImageView
                 android:id="@+id/login_main_logo"
-                android:layout_width="@dimen/_120sdp"
-                android:layout_height="@dimen/_90sdp"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_110sdp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="-70dp"
-                android:src="@drawable/growthpad" />
+                android:layout_marginTop="-73dp"
+                android:src="@drawable/ic_growthpad" />
 
             <TextView
                 android:id="@+id/login"
@@ -54,8 +54,7 @@
                 android:layout_marginTop="@dimen/_50sdp"
                 android:text="Log in"
                 android:textColor="#363E4B"
-                android:textSize="@dimen/_35sdp"
-                android:textStyle="bold" />
+                android:textSize="@dimen/_35sdp" />
 
             <EditText
                 android:id="@+id/login_emailid"
@@ -64,10 +63,9 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/_120sdp"
                 android:background="@drawable/custom_edittext"
-                android:drawablePadding="@dimen/_10sdp"
                 android:fontFamily="@font/montserrat_medium"
                 android:hint="Email, Phone Number or Username"
-                android:inputType="textEmailAddress|number"
+                android:inputType="textEmailAddress"
                 android:paddingLeft="@dimen/_15sdp"
                 android:textColorHint="#363E4B"
                 android:textSize="@dimen/_11sdp" />
@@ -83,7 +81,7 @@
                 android:drawablePadding="@dimen/_10sdp"
                 android:fontFamily="@font/montserrat_medium"
                 android:hint="Password"
-                android:inputType="numberPassword|textPassword"
+                android:inputType="textPassword|numberPassword"
                 android:paddingLeft="@dimen/_15sdp"
                 android:password="true"
                 android:textColorHint="#363E4B"
@@ -150,7 +148,7 @@
         android:id="@+id/create_account_btn"
         android:layout_width="@dimen/_280sdp"
         android:layout_height="@dimen/_40sdp"
-        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_9sdp"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/custom_create_account_btn"
         android:text="Create Account"
