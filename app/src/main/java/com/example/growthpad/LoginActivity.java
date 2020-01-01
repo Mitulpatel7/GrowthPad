@@ -18,12 +18,11 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();
         setContentView(R.layout.activity_login);
         login_email = findViewById(R.id.login_emailid);
         login_password  = findViewById(R.id.login_password);
         login_btn = findViewById(R.id.login_btn);
-        forgotpassword = findViewById(R.id.forgot_password);
+        forgotpassword = findViewById(R.id.login_forgot_password_txtview);
         createaccount = findViewById(R.id.create_account_btn);
 
         //create account click event
@@ -42,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
         forgotpassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this,Splash_Screen.class);
+                Intent intent = new Intent(LoginActivity.this,ForgotPassword.class);
                 startActivity(intent);
                 finish();
             }

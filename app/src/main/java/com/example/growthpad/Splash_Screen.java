@@ -10,15 +10,14 @@ import android.widget.TextView;
 public class Splash_Screen extends AppCompatActivity {
 
     ImageView growthpad_logo;
-    TextView Growth , pad , growthpadapp;
+    TextView growth , pad , growthpadapp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();
         setContentView(R.layout.activity_splash__screen);
         growthpad_logo = findViewById(R.id.growthpad_logo);
-        Growth = findViewById(R.id.growth);
+        growth = findViewById(R.id.growth);
         pad = findViewById(R.id.pad);
         growthpadapp = findViewById(R.id.growthpad_app);
 

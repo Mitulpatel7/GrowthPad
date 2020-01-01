@@ -8,15 +8,12 @@
     android:background="#FFFFFF"
     tools:context=".Splash_Screen">
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true">
     <ImageView
         android:id="@+id/growthpad_logo"
         android:layout_width="@dimen/_200sdp"
         android:layout_height="@dimen/_180sdp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_120sdp"
         android:src="@drawable/ic_growthpad"/>
 
     <TextView
@@ -24,11 +21,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/growthpad_logo"
-        android:layout_marginStart="@dimen/_35sdp"
+        android:layout_marginStart="@dimen/_82sdp"
         android:text="Growth"
+        android:fontFamily="@font/montserrat_bold"
         android:textColor="#77C360"
-        android:textSize="@dimen/_25sdp"
-        android:textStyle="bold" />
+        android:textSize="@dimen/_25sdp" />
 
     <TextView
         android:id="@+id/pad"
@@ -36,6 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/growthpad_logo"
         android:layout_toRightOf="@id/growth"
+        android:fontFamily="@font/montserrat_bold"
         android:text="Pad"
         android:textColor="#363E4B"
         android:textSize="@dimen/_25sdp"
@@ -52,8 +50,6 @@
         android:text="growthpad.app"
         android:textColor="#363E4B"
         android:textSize="@dimen/_15sdp" />
-
-    </RelativeLayout>
 
 
 </RelativeLayout>
