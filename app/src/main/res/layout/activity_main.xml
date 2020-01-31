@@ -7,5 +7,84 @@
     android:background="@android:color/white"
     tools:context=".MainActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/growthpad_logo_action_bar"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/ic_growthpad"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Growth"
+            android:id="@+id/growth"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/growthpad_logo_action_bar"
+            android:textSize="@dimen/_20sdp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="#77c360"/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pad"
+            android:id="@+id/pad"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/growth"
+            android:textSize="@dimen/_20sdp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="#363e4b"/>
+
+        <ImageButton
+            android:id="@+id/profile_button"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/_8sdp"
+            android:src="@drawable/ic_person_black_24dp"
+            android:background="@drawable/custom_background"
+            />
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_below="@id/toolbar"
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:layout_above="@id/bottom_navigation_bar">
+
+    </RelativeLayout>
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation_bar"
+        android:background="@android:color/white"
+        android:textAlignment="center"
+        app:itemIconSize="@dimen/_25sdp"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/navigation_menu"/>
 
 </RelativeLayout>

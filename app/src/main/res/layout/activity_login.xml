@@ -16,6 +16,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/_30sdp"
         android:layout_marginBottom="-70dp"
+        android:elevation="@dimen/_3sdp"
         android:src="@drawable/ic_growthpad" />
 
 
@@ -26,7 +27,7 @@
         android:layout_marginTop="0dp"
         android:layout_marginBottom="@dimen/_5sdp">
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
 
             android:id="@+id/card_view"
             android:layout_width="@dimen/_280sdp"
@@ -36,14 +37,16 @@
             app:cardBackgroundColor="#ffffff"
             app:cardCornerRadius="@dimen/_5sdp">
 
-            <ImageView
+            <!--<ImageView
                 android:id="@+id/login_main_logo"
                 android:layout_width="@dimen/_130sdp"
                 android:layout_height="@dimen/_110sdp"
+
+                android:elevation="@dimen/_3sdp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="-73dp"
                 android:src="@drawable/ic_growthpad" />
-
+-->
             <TextView
                 android:id="@+id/login"
 
@@ -81,7 +84,7 @@
                 android:drawablePadding="@dimen/_10sdp"
                 android:fontFamily="@font/montserrat_medium"
                 android:hint="Password"
-                android:inputType="textPassword|numberPassword"
+                android:inputType="textPassword"
                 android:paddingLeft="@dimen/_15sdp"
                 android:password="true"
                 android:textColorHint="#363E4B"
@@ -113,24 +116,17 @@
                 android:textStyle="bold" />
 
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
     </FrameLayout>
 
-    <Button
-        android:layout_width="@dimen/_280sdp"
-        android:layout_height="@dimen/_45sdp"
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
         android:layout_gravity="center"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:background="@drawable/custom_google_btn"
-        android:drawableLeft="@drawable/google"
-        android:fontFamily="@font/montserrat_medium"
-        android:gravity="center"
-        android:paddingLeft="@dimen/_15sdp"
-        android:text="Sign up using Google"
-        android:textAllCaps="false"
-        android:textSize="@dimen/_17sdp"
-        android:textStyle="bold" />
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:text="Sign in using Google"
+        />
 
     <TextView
         android:layout_width="wrap_content"

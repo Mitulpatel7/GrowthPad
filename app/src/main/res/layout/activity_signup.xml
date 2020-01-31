@@ -13,6 +13,7 @@
         android:id="@+id/signup_main_upr_logo"
         android:layout_width="@dimen/_130sdp"
         android:layout_height="@dimen/_110sdp"
+        android:elevation="@dimen/_3sdp"
         android:layout_marginBottom="-70dp"
         android:src="@drawable/ic_growthpad" />
 
@@ -23,7 +24,7 @@
         android:layout_marginTop="0dp"
         android:layout_marginBottom="@dimen/_5sdp">
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
 
             android:id="@+id/card_view"
             android:layout_width="@dimen/_280sdp"
@@ -34,12 +35,14 @@
             app:cardCornerRadius="@dimen/_5sdp">
 
 
+<!--
             <ImageView
                 android:layout_width="@dimen/_130sdp"
                 android:layout_height="@dimen/_110sdp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="-73dp"
                 android:src="@drawable/ic_growthpad" />
+-->
 
             <TextView
                 android:layout_width="wrap_content"
@@ -104,14 +107,14 @@
                 android:background="@drawable/custom_edittext"
                 android:fontFamily="@font/montserrat_medium"
                 android:hint="Create Password"
-                android:inputType="textPassword|numberPassword"
+                android:inputType="textPassword"
                 android:paddingLeft="@dimen/_15sdp"
                 android:password="true"
                 android:textColorHint="#363e4b"
                 android:textSize="@dimen/_11sdp" />
 
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
 
     </FrameLayout>

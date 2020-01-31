@@ -14,7 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Successful_password_reset"></activity>
+        <activity android:name=".Add_goal_activity"></activity>
+        <activity android:name=".profile_Activity" />
+        <activity android:name=".Add_task_activity" />
+        <activity android:name=".Successful_password_reset" />
         <activity android:name=".Create_new_password" />
         <activity android:name=".OTP_verification_Forgot_password" />
         <activity android:name=".ForgotPassword" />
