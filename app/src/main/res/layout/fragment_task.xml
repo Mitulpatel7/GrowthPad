@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:id="@+id/task_main_layout"
+    tools:context=".TaskFragment">
+
+
+    <!--<com.google.android.material.card.MaterialCardView
+        android:layout_width="913px"
+        android:layout_height="213px"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/custom_task_cardview"
+        android:layout_marginTop="37px">
+
+        <CheckBox
+            android:layout_width="70px"
+            android:layout_height="70px"
+            android:layout_marginTop="30px"
+            android:layout_marginLeft="48px"
+            android:id="@+id/checkbox"
+            android:checked="true"
+            android:clickable="true"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title_task"
+            android:text="WNS Practical"
+            android:textColor="#77c360"
+            android:textSize="49px"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_marginTop="32px"
+            android:layout_marginLeft="164px"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sub_task"
+            android:text="Subtasks: 4"
+            android:textColor="#363e4b"
+            android:textSize="20px"
+            android:fontFamily="@font/montserrat_medium"
+            android:layout_marginTop="97px"
+            android:layout_marginLeft="169px"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/deadline"
+            android:text="Deadline: 14/01/2020"
+            android:textColor="#363e4b"
+            android:textSize="20px"
+            android:fontFamily="@font/montserrat_medium"
+            android:layout_marginTop="97px"
+            android:layout_marginLeft="316px"/>
+
+
+        <ImageButton
+            android:layout_width="47px"
+            android:layout_height="29px"
+            android:id="@+id/task_extends_arrow"
+            android:layout_gravity="end"
+            android:layout_marginRight="158px"
+            android:src="@drawable/cardview_extends_arrow_task"
+            android:layout_marginTop="44px"
+            />
+
+
+
+        <ImageButton
+            android:layout_width="47px"
+            android:layout_height="50px"
+            android:id="@+id/dots_3"
+            android:layout_gravity="end"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="79px"
+            android:src="@drawable/more_option"
+            android:layout_marginTop="37px"
+            />
+
+        <Button
+            android:layout_width="115px"
+            android:layout_height="35px"
+            android:text="College"
+            android:id="@+id/tag_1"
+            android:background="@drawable/custom_btn"
+            android:textColor="@android:color/white"
+            android:textSize="15px"
+            android:textAllCaps="false"
+            android:layout_marginLeft="48px"
+            android:layout_marginTop="140px"
+            android:fontFamily="@font/montserrat_semibold"
+            />
+
+
+        <Button
+            android:layout_width="115px"
+            android:layout_height="35px"
+            android:text="WNS"
+            android:id="@+id/tag_2"
+            android:background="@drawable/custom_btn"
+            android:textColor="@android:color/white"
+            android:textSize="15px"
+            android:textAllCaps="false"
+            android:layout_marginLeft="172px"
+            android:layout_marginTop="140px"
+            android:fontFamily="@font/montserrat_semibold"
+            />
+
+
+        <Button
+            android:layout_width="115px"
+            android:layout_height="35px"
+            android:text="Practicals"
+            android:id="@+id/tag_3"
+            android:background="@drawable/custom_btn"
+            android:textColor="@android:color/white"
+            android:textSize="15px"
+            android:textAllCaps="false"
+            android:layout_marginLeft="302px"
+            android:layout_marginTop="140px"
+            android:fontFamily="@font/montserrat_semibold"
+            />
+
+
+        <Button
+            android:layout_width="155px"
+            android:layout_height="35px"
+            android:text="+ Add Tag"
+            android:textColor="#77c360"
+            android:layout_marginTop="140px"
+            android:layout_marginLeft="458px"
+            android:textAllCaps="false"
+            android:fontFamily="@font/montserrat_semibold"
+            android:background="@drawable/custom_add_tag_task"
+            android:textSize="20px"/>
+
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/task_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

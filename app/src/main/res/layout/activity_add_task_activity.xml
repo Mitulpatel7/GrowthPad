@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    android:overScrollMode="always"
+    android:id="@+id/add_task_layout"
+    tools:context=".Add_task_activity">
+
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#363e4b">
+
+    <TextView
+        android:id="@+id/add_task_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Task"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/_20sdp"
+        android:layout_centerInParent="true"/>
+
+    <ImageButton
+        android:id="@+id/close_task_btn"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_close_black_24dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        />
+
+    </RelativeLayout>
+
+
+    <EditText
+        android:id="@+id/add_task_edittext"
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/relative_layout_task"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:background="@drawable/add_task_custom_edittext"
+        android:paddingLeft="@dimen/_15sdp"
+        android:hint="Task Name"
+        android:textColor="#363e4b"
+        android:textColorHint="#363e4b"
+        android:fontFamily="@font/montserrat_medium"/>
+
+
+
+    <EditText
+        android:id="@+id/add_task_description_edittext"
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:gravity="top|left"
+        android:padding="@dimen/_15sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/add_task_edittext"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:background="@drawable/add_task_custom_edittext"
+        android:paddingLeft="@dimen/_15sdp"
+        android:hint="Add Description"
+        android:textColor="#363e4b"
+        android:maxLines="5"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"
+        android:minLines="3"
+        android:textColorHint="#363e4b"
+        android:fontFamily="@font/montserrat_medium"/>
+
+    <ImageView
+        android:id="@+id/task_add_tag_imageview"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:src="@drawable/add_tag"
+        android:layout_below="@id/add_task_description_edittext"
+        android:layout_marginTop="@dimen/_35sdp"
+        android:layout_marginLeft="@dimen/_25sdp"/>
+
+    <TextView
+        android:id="@+id/task_add_tag_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_task_description_edittext"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_37sdp"
+        android:layout_toRightOf="@id/task_add_tag_imageview"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Add Tag"
+        android:textColor="#363e4b"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/task_add_tag_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/task_add_tag_textview"
+        android:layout_below="@id/add_task_description_edittext"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:background="@drawable/custom_edittext"
+        android:layout_marginLeft="@dimen/_25sdp"
+        />
+
+
+
+    <ImageView
+        android:id="@+id/task_set_priority_imageview"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:src="@drawable/priority"
+        android:layout_below="@id/task_add_tag_imageview"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginLeft="@dimen/_25sdp"/>
+
+    <TextView
+        android:id="@+id/task_set_priority_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Priority"
+        android:layout_toRightOf="@id/task_set_priority_imageview"
+        android:layout_below="@id/task_add_tag_textview"
+        android:layout_marginTop="@dimen/_31sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:textColor="#363e4b"
+        android:textSize="@dimen/_12sdp"
+        android:fontFamily="@font/montserrat_medium"
+        android:textStyle="bold" />
+
+
+    <CheckBox
+        android:id="@+id/task_checkbox_important"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  Important"
+        android:fontFamily="@font/montserrat_medium"
+        android:textColor="#363e4b"
+        android:button="@drawable/custom_checkbox"
+        android:layout_marginLeft="@dimen/_25sdp"
+        android:textSize="@dimen/_12sdp"
+        android:layout_below="@id/task_set_priority_imageview"
+        android:layout_marginTop="@dimen/_20sdp"
+        />
+
+
+    <CheckBox
+        android:id="@+id/task_checkbox_urgent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  Urgent"
+        android:fontFamily="@font/montserrat_medium"
+        android:textColor="#363e4b"
+        android:layout_toRightOf="@id/task_checkbox_important"
+        android:button="@drawable/custom_checkbox"
+        android:layout_marginLeft="@dimen/_40sdp"
+        android:textSize="@dimen/_12sdp"
+        android:layout_below="@id/task_set_priority_imageview"
+        android:layout_marginTop="@dimen/_20sdp"
+        />
+
+
+
+    <ImageView
+        android:id="@+id/task_date_time_imageview"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:src="@drawable/set_time"
+        android:layout_below="@id/task_checkbox_important"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginLeft="@dimen/_25sdp"/>
+
+    <TextView
+        android:id="@+id/task_set_date_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Date &amp; Time"
+        android:layout_toRightOf="@id/task_date_time_imageview"
+        android:layout_below="@id/task_checkbox_important"
+        android:layout_marginTop="@dimen/_31sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:textColor="#363e4b"
+        android:textSize="@dimen/_12sdp"
+        android:fontFamily="@font/montserrat_medium"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/task_date_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date "
+        android:layout_toRightOf="@id/task_date_time_imageview"
+        android:layout_below="@id/task_date_time_imageview"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:textColor="#363e4b"
+        android:textSize="@dimen/_12sdp"
+        android:fontFamily="@font/montserrat_medium"
+        />
+
+
+    <Button
+        android:id="@+id/task_set_date_btn"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_toRightOf="@id/task_date_textview"
+        android:layout_below="@id/task_date_time_imageview"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:text="Change"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/montserrat_medium"
+        android:textAllCaps="false"
+        android:background="@drawable/custom_btn"
+        android:layout_marginLeft="@dimen/_80sdp"/>
+
+
+    <TextView
+        android:id="@+id/task_time_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        android:layout_toRightOf="@id/task_date_time_imageview"
+        android:layout_below="@id/task_date_textview"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:textColor="#363e4b"
+        android:textSize="@dimen/_12sdp"
+        android:fontFamily="@font/montserrat_medium"
+        />
+
+
+    <Button
+        android:id="@+id/task_set_time_btn"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_toRightOf="@id/task_time_textview"
+        android:layout_below="@id/task_date_textview"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:text="Change"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/montserrat_medium"
+        android:textAllCaps="false"
+        android:background="@drawable/custom_btn"
+        android:layout_marginLeft="@dimen/_85sdp"/>
+
+
+
+
+    <CheckBox
+        android:id="@+id/task_checkbox_repeat_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  Repeat Task"
+        android:fontFamily="@font/montserrat_medium"
+        android:textColor="#363e4b"
+        android:button="@drawable/custom_checkbox"
+        android:layout_marginLeft="@dimen/_25sdp"
+        android:textSize="@dimen/_12sdp"
+        android:layout_below="@id/task_time_textview"
+        android:layout_marginTop="@dimen/_30sdp"
+        />
+
+
+    <CheckBox
+        android:id="@+id/task_checkbox_remind_me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  Remind Me"
+        android:fontFamily="@font/montserrat_medium"
+        android:textColor="#363e4b"
+        android:button="@drawable/custom_checkbox"
+        android:layout_marginLeft="@dimen/_25sdp"
+        android:textSize="@dimen/_12sdp"
+        android:layout_below="@id/task_checkbox_repeat_task"
+        android:layout_marginTop="@dimen/_15sdp"
+        />
+
+
+
+
+
+
+    <ImageView
+        android:id="@+id/task_attachment_file_imageview"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:src="@drawable/attachment"
+        android:layout_below="@id/task_checkbox_remind_me"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginLeft="@dimen/_25sdp"/>
+
+
+    <TextView
+        android:id="@+id/task_attachment_file_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Attach File"
+        android:layout_toRightOf="@+id/task_attachment_file_imageview"
+        android:layout_below="@id/task_checkbox_remind_me"
+        android:layout_marginTop="@dimen/_34sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:textColor="#363e4b"
+        android:textSize="@dimen/_12sdp"
+        android:fontFamily="@font/montserrat_medium"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/task_save_btn"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@id/task_attachment_file_textview"
+        android:layout_centerHorizontal="true"
+        android:text="Save"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/montserrat_semibold"
+        android:background="@drawable/custom_btn"/>
+
+
+</RelativeLayout>
+
+</ScrollView>

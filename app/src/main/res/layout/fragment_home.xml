@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#363e4b"
+                app:tabIndicator="@color/colorPrimaryDark"
+                app:tabIndicatorHeight="@dimen/_4sdp"
+                app:tabSelectedTextColor="@android:color/white"
+                app:tabTextColor="@android:color/darker_gray"></com.google.android.material.tabs.TabLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tab_layout">
+
+            </androidx.viewpager.widget.ViewPager>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/home_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floating_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:src="@drawable/ic_add_black_24dp"
+                app:borderWidth="0dp"
+                app:rippleColor="#363e4b" />
+
+            <Button
+                android:id="@+id/add_task"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/floating_btn"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:background="@drawable/custom_floating_add_btn"
+                android:fontFamily="@font/montserrat_bold"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:text="Add Task"
+                android:textAllCaps="false"
+                android:textColor="#77c360"
+
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/add_habit"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/add_task"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:background="@drawable/custom_floating_add_btn"
+                android:fontFamily="@font/montserrat_bold"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:text="Add Habit"
+                android:textAllCaps="false"
+                android:textColor="#77c360"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/add_goal"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/add_habit"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:background="@drawable/custom_floating_add_btn"
+                android:fontFamily="@font/montserrat_bold"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:text="Add Goal"
+                android:textAllCaps="false"
+                android:textColor="#77c360"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</RelativeLayout>

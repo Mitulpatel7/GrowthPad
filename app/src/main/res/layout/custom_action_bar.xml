@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/growthpad_logo_action_bar"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:src="@drawable/ic_growthpad"
+        android:layout_margin="@dimen/_8sdp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Growth"
+        android:id="@+id/growth"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/growthpad_logo_action_bar"
+        android:textSize="@dimen/_20sdp"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="#77c360"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pad"
+        android:id="@+id/pad"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/growth"
+        android:textSize="@dimen/_20sdp"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="#363e4b"/>
+
+    <ImageButton
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/_8sdp"
+        android:src="@drawable/ic_person_black_24dp"
+        android:background="@drawable/custom_background"
+        />
+
+</RelativeLayout>

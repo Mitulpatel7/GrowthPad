@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile_Activity">
+
+
+    <ImageButton
+        android:id="@+id/back_profile_btn"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:src="@drawable/close_btn"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"/>
+
+
+        <ImageView
+            android:id="@+id/profile_photo"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:background="@drawable/custom_background"
+            android:backgroundTint="#77c360"
+            android:src="@drawable/ic_person_black_24dp"
+            android:padding="@dimen/_5sdp"/>
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Vasu Gajjar"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_below="@id/profile_photo"
+            android:textColor="#363e4b"
+            android:textColorHint="#363e4b"
+            android:textSize="@dimen/_15sdp" />
+
+
+
+    <TextView
+        android:id="@+id/profile_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="vasugajjar1@gmail.com"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_below="@id/profile_name"
+        android:textColor="#363e4b"
+        android:textColorHint="#363e4b"
+        android:textSize="@dimen/_12sdp" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="@dimen/_260sdp"
+        android:layout_height="@dimen/_1sdp"
+        android:background="#363e4b"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_below="@id/profile_email"/>
+
+    <TextView
+        android:id="@+id/manage_profile_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manage Profile"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_below="@id/view1"
+        android:layout_marginLeft="@dimen/_40sdp"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="#363e4b"
+        android:fontFamily="@font/montserrat_bold"/>
+
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="@dimen/_260sdp"
+        android:layout_height="@dimen/_1sdp"
+        android:background="#363e4b"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/manage_profile_textview"/>
+
+
+    <TextView
+        android:id="@+id/setting_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_below="@id/view2"
+        android:layout_marginLeft="@dimen/_40sdp"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="#363e4b"
+        android:fontFamily="@font/montserrat_bold"/>
+
+
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="@dimen/_260sdp"
+        android:layout_height="@dimen/_1sdp"
+        android:background="#363e4b"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/setting_textview"/>
+
+
+    <TextView
+        android:id="@+id/about_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_below="@id/view3"
+        android:layout_marginLeft="@dimen/_40sdp"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="#363e4b"
+        android:fontFamily="@font/montserrat_bold"/>
+
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="@dimen/_260sdp"
+        android:layout_height="@dimen/_1sdp"
+        android:background="#363e4b"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/about_textview"/>
+
+
+    <TextView
+        android:id="@+id/logout_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log Out"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_below="@id/view4"
+        android:layout_marginLeft="@dimen/_40sdp"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="#363e4b"
+        android:fontFamily="@font/montserrat_bold"/>
+
+
+
+</RelativeLayout>
