@@ -10,9 +10,9 @@
         android:layout_width="@dimen/_280sdp"
         android:layout_height="@dimen/_70sdp"
         android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/_4sdp"
         android:layout_marginBottom="@dimen/_4sdp"
-        android:layout_gravity="center_horizontal"
         android:background="@drawable/custom_task_cardview"
         app:cardCornerRadius="@dimen/_15sdp">
 
@@ -21,112 +21,111 @@
             android:layout_height="wrap_content">
 
 
-                <CheckBox
-                    android:id="@+id/custom_task_checkbox"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:scaleX="0.8"
-                    android:scaleY="0.8"
-                    android:layout_marginLeft="@dimen/_10sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:button="@drawable/custom_checkbox"
-                    android:checked="false"
-                    android:clickable="true" />
+            <CheckBox
+                android:id="@+id/custom_task_checkbox"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:button="@drawable/custom_checkbox"
+                android:checked="false"
+                android:clickable="true"
+                android:scaleX="0.8"
+                android:scaleY="0.8" />
 
 
-                    <ImageView
-                        android:id="@+id/custom_task_dots_3"
-                        android:layout_width="@dimen/_25sdp"
-                        android:layout_height="@dimen/_25sdp"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginRight="@dimen/_15sdp"
-                        android:src="@drawable/more_option"
-                        android:tint="@color/blue" />
-
-                    <ImageView
-                        android:id="@+id/custom_task_extends_arrow"
-                        android:layout_width="@dimen/_25sdp"
-                        android:layout_height="@dimen/_25sdp"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:layout_marginRight="@dimen/_10sdp"
-                        android:layout_toLeftOf="@+id/custom_task_dots_3"
-                        android:src="@drawable/cardview_extends_arrow_task"
-                        android:tint="@color/blue" />
+            <ImageView
+                android:id="@+id/custom_task_delete"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:src="@drawable/delete"
+                android:tint="@color/blue" />
 
 
-
-                <TextView
-                    android:id="@+id/title_custom_task"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/_12sdp"
-                    android:layout_marginTop="@dimen/_8sdp"
-                    android:layout_toLeftOf="@+id/custom_task_card_menu_layout"
-                    android:layout_toRightOf="@id/custom_task_checkbox"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:text="Task Name"
-                    android:textColor="#77c360"
-                    android:textSize="@dimen/_20sdp"
-                    tools:ignore="UnknownId" />
+            <ImageView
+                android:id="@+id/custom_task_share"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_toLeftOf="@id/custom_task_delete"
+                android:src="@drawable/share"
+                android:tint="@color/blue" />
 
 
-
-                <TextView
-                    android:id="@+id/custom_sub_task_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/_15sdp"
-                    android:layout_marginBottom="@dimen/_10sdp"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:text="SubTask :- "
-                    android:textColor="#363e4b"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_below="@id/title_custom_task"
-                    android:textSize="@dimen/_12sdp" />
-
-                <TextView
-                    android:id="@+id/custom_sub_task"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_below="@id/title_custom_task"
-                    android:layout_toRightOf="@id/custom_sub_task_title"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:text="0"
-                    android:textColor="#363e4b"
-                    android:textSize="@dimen/_12sdp" />
+            <TextView
+                android:id="@+id/title_custom_task"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_toLeftOf="@+id/custom_task_card_menu_layout"
+                android:layout_toRightOf="@id/custom_task_checkbox"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Task Name"
+                android:textColor="#77c360"
+                android:textSize="@dimen/_20sdp"
+                tools:ignore="UnknownId" />
 
 
-                <TextView
-                    android:id="@+id/custom_task_deadline_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/title_custom_task"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_toLeftOf="@id/custom_task_deadline"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:text="Deadline:- "
-                    android:textColor="#363e4b"
-                    android:textSize="@dimen/_12sdp" />
+            <TextView
+                android:id="@+id/custom_sub_task_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title_custom_task"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Tag :- "
+                android:textColor="#363e4b"
+                android:textSize="@dimen/_12sdp" />
 
-                <TextView
-                    android:id="@+id/custom_task_deadline"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:layout_below="@id/title_custom_task"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="@dimen/_15sdp"
-                    android:layout_marginBottom="@dimen/_10sdp"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:text="10/10/2020"
-                    android:textColor="#363e4b"
-                    android:textSize="@dimen/_12sdp" />
+            <TextView
+                android:id="@+id/custom_sub_task"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title_custom_task"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_toRightOf="@id/custom_sub_task_title"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Personal"
+                android:textColor="#363e4b"
+                android:textSize="@dimen/_12sdp" />
 
 
-            </RelativeLayout>
+            <TextView
+                android:id="@+id/custom_task_deadline_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title_custom_task"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_toLeftOf="@id/custom_task_deadline"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Deadline:- "
+                android:textColor="#363e4b"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/custom_task_deadline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/title_custom_task"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="10/10/2020"
+                android:textColor="#363e4b"
+                android:textSize="@dimen/_12sdp" />
+
+
+        </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
 

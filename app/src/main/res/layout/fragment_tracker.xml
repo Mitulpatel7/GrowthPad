@@ -3,15 +3,296 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".TrackerFragment"
-    android:background="@android:color/holo_blue_light">
+    android:background="@android:color/white">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Growth Tracker"
-        android:layout_centerInParent="true"
-        android:textSize="@dimen/_25sdp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/overall_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:id="@+id/txt_overall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Over All"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="@dimen/_30sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    />
+
+                <com.budiyev.android.circularprogressbar.CircularProgressBar
+                    android:id="@+id/overall_progress"
+                    android:layout_width="@dimen/_160sdp"
+                    android:layout_height="@dimen/_160sdp"
+                    app:animate="true"
+                    app:animateDuration="600"
+                    app:fillColor="#fff"
+                    app:progress="65"
+                    app:progressColor="@color/colorPrimary"
+                    app:progressRoundCap="true"
+                    app:progressTextColor="@color/colorPrimary"
+                    app:progressTextSize="@dimen/_45sdp"
+                    app:progressTextEnabled="true"
+                    app:progressTextType="percent"
+                    app:progressWidth="@dimen/_6sdp"
+                    app:startAngle="270"
+                    app:total="100"
+                    app:totalWidth="@dimen/_6sdp"
+                    android:layout_below="@id/txt_overall"
+
+                    />
+
+                <TextView
+                    android:id="@+id/overall_complete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_15sdp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/overall_progress"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="Completed : 65%"/>
+
+                <TextView
+                    android:id="@+id/overall_remain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_15sdp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="#363e4b"
+                    android:layout_centerHorizontal="true"
+                    android:text="Remaining : 35%"
+                    android:layout_below="@id/overall_complete"/>
+
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/overall_layout"
+                android:layout_marginVertical="@dimen/_30sdp"
+                android:scrollbarStyle="outsideInset"
+                android:scrollIndicators="right">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_20sdp">
+
+                        <TextView
+                            android:id="@+id/txt_task"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Task"
+                            android:textColor="@color/colorPrimary"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:textSize="@dimen/_20sdp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            />
+
+                        <com.vaibhavlakhera.circularprogressview.CircularProgressView
+                            android:id="@+id/task_progress"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_height="@dimen/_120sdp"
+                            app:animate="true"
+                            app:animateDuration="600"
+                            app:fillColor="#fff"
+                            app:progress="70"
+                            app:progressColor="@color/colorPrimary"
+                            app:progressRoundCap="true"
+                            app:progressTextColor="@color/colorPrimary"
+                            app:progressTextSize="@dimen/_30sdp"
+                            app:progressTextEnabled="true"
+                            app:progressTextType="percent"
+                            app:progressWidth="@dimen/_6sdp"
+                            app:startAngle="270"
+                            app:total="100"
+                            app:totalWidth="@dimen/_6sdp"
+                            android:layout_below="@id/txt_task"
+                            android:background="@drawable/custom_progress"
+                            />
+
+                        <TextView
+                            android:id="@+id/task_complete"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_12sdp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/task_progress"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:text="Completed : 70%"/>
+
+                        <TextView
+                            android:id="@+id/task_remain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_12sdp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:textColor="#363e4b"
+                            android:layout_centerHorizontal="true"
+                            android:text="Remaining : 30%"
+                            android:layout_below="@id/task_complete"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_20sdp">
+
+                        <TextView
+                            android:id="@+id/txt_habit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Habit"
+                            android:textColor="@color/colorPrimary"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:textSize="@dimen/_20sdp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            />
+
+                        <com.vaibhavlakhera.circularprogressview.CircularProgressView
+                            android:id="@+id/habit_progress"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_height="@dimen/_120sdp"
+                            app:animate="true"
+                            app:animateDuration="600"
+                            app:fillColor="#fff"
+                            app:progress="40"
+                            app:progressColor="@color/colorPrimary"
+                            app:progressRoundCap="true"
+                            app:progressTextColor="@color/colorPrimary"
+                            app:progressTextSize="@dimen/_30sdp"
+                            app:progressTextEnabled="true"
+                            app:progressTextType="percent"
+                            app:progressWidth="@dimen/_6sdp"
+                            app:startAngle="270"
+                            app:total="100"
+                            app:totalWidth="@dimen/_6sdp"
+                            android:layout_below="@id/txt_habit"
+                            android:background="@drawable/custom_progress"
+                            />
+
+                        <TextView
+                            android:id="@+id/habit_complete"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_12sdp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/habit_progress"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:text="Completed : 40%"/>
+
+                        <TextView
+                            android:id="@+id/habit_remain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_12sdp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:textColor="#363e4b"
+                            android:layout_centerHorizontal="true"
+                            android:text="Remaining : 60%"
+                            android:layout_below="@id/habit_complete"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/txt_goal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Goal"
+                            android:textColor="@color/colorPrimary"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:textSize="@dimen/_20sdp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            />
+
+                        <com.vaibhavlakhera.circularprogressview.CircularProgressView
+                            android:id="@+id/goal_progress"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_height="@dimen/_120sdp"
+                            app:animate="true"
+                            app:animateDuration="600"
+                            app:fillColor="#fff"
+                            app:progress="95"
+                            app:progressColor="@color/colorPrimary"
+                            app:progressRoundCap="true"
+                            app:progressTextColor="@color/colorPrimary"
+                            app:progressTextSize="@dimen/_30sdp"
+                            app:progressTextEnabled="true"
+                            app:progressTextType="percent"
+                            app:progressWidth="@dimen/_6sdp"
+                            app:startAngle="270"
+                            app:total="100"
+                            app:totalWidth="@dimen/_6sdp"
+                            android:layout_below="@id/txt_goal"
+                            android:background="@drawable/custom_progress"
+                            />
+
+                        <TextView
+                            android:id="@+id/goal_complete"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_12sdp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/goal_progress"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:text="Completed : 95%"/>
+
+                        <TextView
+                            android:id="@+id/goal_remain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_12sdp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:textColor="#363e4b"
+                            android:layout_centerHorizontal="true"
+                            android:text="Remaining : 05%"
+                            android:layout_below="@id/goal_complete"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
 </RelativeLayout>

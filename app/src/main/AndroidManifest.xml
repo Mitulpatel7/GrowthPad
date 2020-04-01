@@ -14,7 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Add_habit_activity"></activity>
+        <activity android:name=".TaskDetails"/>
+        <activity android:name=".HabitDetails"/>
+        <activity android:name=".GoalDetails"/>
+        <activity android:name=".ManageProfile"></activity>
+        <activity android:name=".Add_habit_activity" />
         <activity android:name=".Add_goal_activity" />
         <activity android:name=".profile_Activity" />
         <activity android:name=".Add_task_activity" />

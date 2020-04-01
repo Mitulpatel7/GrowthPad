@@ -3,15 +3,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CommunityFragment"
-    android:background="@android:color/holo_red_light">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CommunityFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <com.google.android.material.tabs.TabLayout
+        app:tabMode="scrollable"
+        android:id="@+id/tab_layout_community"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Community Fragment"
-        android:textSize="@dimen/_25sdp"
-        android:layout_centerInParent="true"/>
+        android:background="#363e4b"
+        app:tabIndicator="@color/colorPrimaryDark"
+        app:tabIndicatorHeight="@dimen/_4sdp"
+        app:tabSelectedTextColor="@android:color/white"
+        app:tabTextColor="@android:color/darker_gray"/>
 
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager_community"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tab_layout_community"/>
+
+    </RelativeLayout>
 
 </RelativeLayout>

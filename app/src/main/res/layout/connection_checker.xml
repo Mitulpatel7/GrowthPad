@@ -10,7 +10,7 @@
         android:layout_height="150dip"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:background="@color/colorAccent">
+        android:background="#363e4b">
 
         <RelativeLayout
             android:id="@+id/relativeLayout1"

@@ -13,6 +13,11 @@
     android:layout_height="match_parent"
     tools:context=".Add_goal_activity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbat_add_goal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#363e4b">
     <RelativeLayout
         android:id="@+id/relative_layout_goal"
         android:layout_width="match_parent"
@@ -43,12 +48,15 @@
 </RelativeLayout>
 
 
+    </androidx.appcompat.widget.Toolbar>
+
+
     <EditText
         android:id="@+id/add_goal_edittext"
         android:layout_width="@dimen/_280sdp"
         android:layout_height="@dimen/_40sdp"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/relative_layout_goal"
+        android:layout_below="@id/toolbat_add_goal"
         android:layout_marginTop="@dimen/_30sdp"
         android:background="@drawable/add_task_custom_edittext"
         android:paddingLeft="@dimen/_15sdp"

@@ -3,4 +3,41 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string-array name="tag_array">
+        <item>Personal</item>
+        <item>Health</item>
+        <item>Study</item>
+        <item>Work</item>
+    </string-array>
+
+    <string-array name="duration_array">
+        <item>21 days</item>
+        <item>1 Month</item>
+        <item>2 Months</item>
+        <item>3 Months</item>
+        <item>4 Months</item>
+        <item>5 Months</item>
+    </string-array>
+
+    <string-array name="goal_duration_array">
+        <item>1 Week</item>
+        <item>2 Week</item>
+        <item>1 Month</item>
+        <item>2 Month</item>
+        <item>5 Month</item>
+        <item>1 Year</item>
+    </string-array>
+
+    <string-array name="frequency_array">
+        <item>Every Day</item>
+        <item>Once a Week</item>
+        <item>Twice a Week</item>
+        <item>Thrice a Week</item>
+        <item>Once a Month</item>
+        <item>Twice a Month</item>
+        <item>Thrice a Month</item>
+    </string-array>
+
 </resources>

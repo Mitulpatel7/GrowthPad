@@ -15,6 +15,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.icu.text.DateFormat;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
@@ -39,7 +40,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Locale;
 
-import static com.example.growthpad.ConstantURL.user_id;
+import static com.example.growthpad.ConstantURL.    user_id;
 
 public class Add_task_activity extends AppCompatActivity {
     EditText add_task_edittext ,add_descriprion_edittext;
@@ -52,11 +53,15 @@ public class Add_task_activity extends AppCompatActivity {
 
     ImageButton close_task_imgbtn;
 
-    TextView task_date_textview , task_attachments , task_time_textview;
+    TextView task_date_textview;
+    TextView task_attachments;
+    TextView task_time_textview;
+    TextView task_priority;
+    String stask_priority;
 
     String[] task_tags = {"Personal", "Home" , "Office"};
 
-    private int year, month,day, hour, minute;
+    //private int year, month,day, hour, minute;
     String add_tag;
 
     private Context _context;
@@ -66,6 +71,8 @@ public class Add_task_activity extends AppCompatActivity {
     SharedPreferences sp;
     String sImportant,sUrgent,sRepeatTast,sRemindMe;
     Calendar calendar;
+    Calendar timeCalender;
+    int hour,min;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +84,7 @@ public class Add_task_activity extends AppCompatActivity {
         add_tag_spinner = findViewById(R.id.task_add_tag_spinner);
         important = findViewById(R.id.task_checkbox_important);
         urgent = findViewById(R.id.task_checkbox_urgent);
+        task_priority = findViewById(R.id.task_set_priority_textview);
         remind_me = findViewById(R.id.task_checkbox_remind_me);
         task_date_textview = findViewById(R.id.task_date_textview);
         task_time_textview = findViewById(R.id.task_time_textview);
@@ -91,10 +99,10 @@ public class Add_task_activity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(important.isChecked()){
-                    sImportant = important.getText().toString();
+                   sImportant = important.getText().toString();
                 }
                 else{
-                    sImportant = "";
+                   sImportant = "";
                 }
             }
         });
@@ -102,7 +110,7 @@ public class Add_task_activity extends AppCompatActivity {
         urgent.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(important.isChecked()){
+                if(urgent.isChecked()){
                     sUrgent = urgent.getText().toString();
                 }
                 else{
@@ -126,6 +134,7 @@ public class Add_task_activity extends AppCompatActivity {
         remind_me.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
                 if(remind_me.isChecked()){
                     sRemindMe = remind_me.getText().toString();
                 }
@@ -138,6 +147,30 @@ public class Add_task_activity extends AppCompatActivity {
         save_task_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(important.isChecked()){
+                    sImportant = important.getText().toString();
+                }
+                else{
+                    sImportant = "";
+                }
+                if(urgent.isChecked()){
+                    sUrgent = urgent.getText().toString();
+                }
+                else{
+                    sUrgent = "";
+                }
+                if(repeat_task.isChecked()){
+                    sRepeatTast = repeat_task.getText().toString();
+                }
+                else{
+                    sRepeatTast = "";
+                }
+                if(remind_me.isChecked()){
+                    sRemindMe = remind_me.getText().toString();
+                }
+                else{
+                    sRemindMe = "";
+                }
                 if(new ConnectionDetector(Add_task_activity.this).isConnectingToInternet())
                 {
                     new task_details().execute();
@@ -171,7 +204,6 @@ public class Add_task_activity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 add_tag =parent.getItemAtPosition(position).toString();
-
             }
 
             @Override
@@ -180,10 +212,67 @@ public class Add_task_activity extends AppCompatActivity {
             }
         });
 
-
-
-
         calendar = Calendar.getInstance();
+        timeCalender = Calendar.getInstance();
+
+        final TimePickerDialog.OnTimeSetListener time = new TimePickerDialog.OnTimeSetListener() {
+            @Override
+            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                hour = hourOfDay;
+                min = minute;
+                String sAMPM;
+                /*String sAMPM;
+                int sHour = 0;
+                if(hour>12){
+                    sHour-=12;
+                    sAMPM = "PM";
+                }
+                else if(hour==12){
+                    sHour = 12;
+                    sAMPM = "PM";
+                }
+                else if(hour==0){
+                    sHour += 12;
+                    sAMPM = "AM";
+                }
+                else{
+                    sHour+=12;
+                    sAMPM = "AM";
+                }*/
+                if(hour == 0){
+                    hour += 12;
+                    sAMPM = "AM";
+                } else if(hour == 12){
+                    sAMPM = "PM";
+                } else if(hour > 12){
+                    hour -= 12;
+                    sAMPM = "PM";
+                } else {
+                    sAMPM = "AM";
+                }
+
+
+                String sMinute;
+                if(min<10){
+                    sMinute = "0"+min;
+                }
+                else{
+                    sMinute = String.valueOf(min);
+                }
+
+                task_time_textview.setText(hour+" : "+sMinute+" "+sAMPM);
+
+            }
+        };
+
+
+
+        set_time_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new TimePickerDialog(Add_task_activity.this,time,hour,min,false).show();
+            }
+        });
 
         final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
             @Override
@@ -215,15 +304,6 @@ public class Add_task_activity extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
-
-
-
     }
 
 //task add code
@@ -236,7 +316,7 @@ public class Add_task_activity extends AppCompatActivity {
             pd = new ProgressDialog(Add_task_activity.this);
             pd.setMessage("Please Wait");
             pd.setCancelable(false);
-            pd.dismiss();
+            pd.show();
         }
 
         @Override
@@ -246,10 +326,14 @@ public class Add_task_activity extends AppCompatActivity {
             hashmap.put("task_name",add_task_edittext.getText().toString());
             hashmap.put("task_description",add_descriprion_edittext.getText().toString());
             hashmap.put("task_tag",add_tag);
-            hashmap.put("task_priority",sImportant);
+            hashmap.put("task_important",sImportant);
+            hashmap.put("task_urgent",sUrgent);
+            hashmap.put("task_date",task_date_textview.getText().toString());
+            hashmap.put("task_time",task_time_textview.getText().toString());
             hashmap.put("task_repeat",sRepeatTast);
             hashmap.put("task_reminder",sRemindMe);
-            return new MakeServiceCall().MakeServiceCall(ConstantURL.URL+"task_details.php",MakeServiceCall.POST,hashmap);
+            hashmap.put("task_attachments","");
+            return new MakeServiceCall().MakeServiceCall(ConstantURL.URL+"add_task_details.php",MakeServiceCall.POST,hashmap);
         }
 
 
@@ -265,7 +349,6 @@ public class Add_task_activity extends AppCompatActivity {
                     Intent intent = new Intent(Add_task_activity.this,MainActivity.class);
                     startActivity(intent);
                     finish();
-
                 }
                 else
                 {

@@ -28,10 +28,6 @@ public class profile_Activity extends AppCompatActivity {
 
     TextView profile_name,  profile_email  , manage_profile , setting , about , logout;
 
-
-
-
-
     SharedPreferences sp;
 
     @Override
@@ -64,6 +60,34 @@ public class profile_Activity extends AppCompatActivity {
             }
         });
 
+
+        manage_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(profile_Activity.this,ManageProfile.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(profile_Activity.this,SettingActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sp.edit().clear().commit();
+                Intent intent = new Intent(profile_Activity.this,LoginActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
 
 
